@@ -1,5 +1,9 @@
 module.exports = app =>{
-    app.listen(app.set('port'),() =>{
-        console.log(`Ntask API - porta ${app.get('port')}`);
-    })
+    app.db.async().done(() => {
+
+        app.listen(app.set('port'),() =>{
+            console.log(`Ntask API - porta ${app.get('port')}`);
+        });
+
+    });
 }
