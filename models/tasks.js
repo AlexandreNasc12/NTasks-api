@@ -1,6 +1,6 @@
 module.exports = app => {
     return {
-        ObterTodas : (params, callback) =>{
+        listar : (params, callback) => {
             return callback([
                 {titulo : 'Lavar a louça'},
                 {titulo : 'Formatar Pc'},
